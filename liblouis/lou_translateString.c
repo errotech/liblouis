@@ -354,7 +354,9 @@ matchCurrentInput(
 		const InString *input, int pos, const widechar *passInstructions, int passIC) {
 	int k;
 	int kk = pos;
-	for (k = passIC + 2; k < passIC + 2 + passInstructions[passIC + 1]; k++)
+	for (k = passIC + 2;
+			((k < passIC + 2 + passInstructions[passIC + 1]) && (kk < input->length));
+			k++)
 		if (input->chars[kk] == ENDSEGMENT || passInstructions[k] != input->chars[kk++])
 			return 0;
 	return 1;
@@ -3255,7 +3257,8 @@ checkNumericMode(const TranslationTableHeader *table, int pos, const InString *i
 
 	/* in numeric mode */
 	else {
-		if (!checkAttr(input->chars[pos], CTC_Digit | CTC_LitDigit | CTC_NumericMode, 0,
+		if (!checkAttr(input->chars[pos],
+					CTC_Digit | CTC_LitDigit | CTC_NumericMode | CTC_MidEndNumericMode, 0,
 					table)) {
 			*numericMode = 0;
 			if (brailleIndicatorDefined(table->noContractSign, table, &indicRule))
