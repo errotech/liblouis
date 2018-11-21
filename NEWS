@@ -19,6 +19,8 @@ issues]].
   of diacritics working
 - Fixes to Latvian braille table thanks to Gatis Grintals and Artis
   Raugulis.
+- New table for Arabic contracted braille thanks to Ikrami Ahmad.
+- New table for Arabic computer braille thanks to Ikrami Ahmad.
 
 ** Other changes
 - Updated the ~lou_allround~ and ~lou_trace~ test tools to include all
@@ -31,8 +33,11 @@ issues]].
 
 ** New, renamed or removed tables
 *** New
+- ar-ar-g2.ctb
+- ar-ar-comp8.utb
 *** Renamed
 *** Removed
+- ar-fa.utb
 
 * Noteworthy changes in release 3.7.0 (2018-09-03)
 This release implements major improvements for back-translation thanks
