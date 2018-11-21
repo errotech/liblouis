@@ -169,6 +169,7 @@ table: |
   punctuation , 6
   punctuation - 36
   punctuation . 46
+  include tables/basic-spaces.uti
   include tables/latinLetterDef6Dots.uti
   include tables/digits6Dots.uti
   include tables/litdigits6Dots.uti
