@@ -941,8 +941,8 @@ main(int argc, char *argv[]) {
 						event_names[YAML_SCALAR_EVENT], event_names[event.type]);
 			if ((tables[k++] = read_table(&event, &parser, display_table))) {
 				if (k == MAXTABLES)
-				  error_at_line(EXIT_FAILURE, 0, file_name, event.start_mark.line + 1,
-						"Only %d tables in one YAML test supported", MAXTABLES);
+					error_at_line(EXIT_FAILURE, 0, file_name, event.start_mark.line + 1,
+							"Only %d tables in one YAML test supported", MAXTABLES);
 				yaml_event_delete(&event);
 			} else
 				break;
