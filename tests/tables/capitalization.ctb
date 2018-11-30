@@ -1,4 +1,4 @@
-include tables/basic-spaces.uti
+include tables/spaces.uti
 
 uplow Aa 1
 uplow Bb 2
